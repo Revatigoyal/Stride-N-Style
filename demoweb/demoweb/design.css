@@ -1,0 +1,155 @@
+﻿
+.header {
+    background:lightpink;
+}
+.body {
+    font-family:sans-serif;
+}
+.banner {
+    width:100%;
+    height:100vh;
+    position:relative;
+    overflow:hidden;
+}
+
+.slider {
+    width:100%;
+    height:100vh;
+    position:absolute;
+    top:0;
+}
+#slideImg {
+    width: 100%;
+    height: 100%;
+    animation:zoom 3s linear infinite;
+}
+@keyframes zoom {
+    0% {
+        transform: scale(1);
+    }
+    15% {
+            transform:scale(1);
+        }
+    85% {
+            transform: scale(1);
+        }
+    100% {
+        transform: scale(1.3);
+    }
+    
+}
+.overlay {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));
+    position:absolute;
+    top:0;
+}
+.content {
+  width :60%;
+  margin:160px auto 0;
+  text-align:center;
+  color:#fff;
+
+}
+    .content h1 {
+        font-size:60px;
+    }
+    .content h3 {
+        width:80%;
+        margin:20px auto 100px;
+        font-weight:100;
+        line-height:25px;
+    }
+.button {
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 0 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid deeppink;
+    background: deeppink;
+    color:#fff;
+    cursor:pointer;
+    transition:background 0.5s
+}
+    .button:hover {
+        background:transparent;
+        border:2px solid #fff; 
+    }
+/*Categories*/
+.Categories {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ddd;
+    width: 100%;
+    height: 100%;
+}
+.cate1 {
+    display: flex;
+    width: 90%;
+    justify-content: space-around;
+}
+.Categories .gender {
+    width: 360px;
+    height: 400px;
+    padding: 24px;
+    background: #fff;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    transition: .6s ease-out;
+    box-shadow: 0 10px 10px #fff;
+}
+    .Categories .gender:hover {
+        transform: translateY(15px);
+    }
+
+        .Categories .gender:hover:before {
+            opacity: 1;
+        }
+
+        .Categories .gender:hover .specific {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+    .Categories .gender:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to top,#ff00dc,transparent);
+        z-index: 2;
+        transition: 0.5s;
+        opacity: 0;
+    }
+
+.gender img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+
+.specific {
+    position: relative;
+    z-index: 3;
+    color: #fff;
+    opacity: 0;
+    transform: translateY(60px);
+    transition: 0.5s
+}
+
+    .specific h2 {
+        margin: 0;
+        font-family: 'Agency FB';
+        letter-spacing: 3px;
+    }

@@ -1,0 +1,154 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="AdminMaster.master.cs" Inherits="Admin_AdminMaster" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Admin Master Page</title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial scale=1" />
+    <meta http-equiv="X-UA-compatible"content="IE-edge" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <script src="Scripts/bootstrap.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+    <link href="../custom.css" rel="stylesheet" />
+    <style type="text/css">
+    .Navigation .header .fa-solid:hover {
+    color: deeppink;
+}
+ body{
+     min-height:100vh;
+     display:flex;
+     flex-direction:column;
+ }
+ footer {
+     margin-top:auto;
+ }
+.des {
+    color: black;
+    font-family:Proxima Nova;
+    font-size: 40px;
+}
+
+.dropdown-header {
+    background-color: #d9d9d9;
+    color: white;
+}
+        li a {
+             text-decoration:none;
+             color:black;
+        }
+       
+.navbar-nav li a:hover {
+    border-bottom: 2px solid deeppink;
+
+}
+</style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <div class="header">
+             <div class="navbar navbar-expand-md navbar-lg bg-light ">
+              <div class="collapse navbar-collapse" ">
+                    <a class="navbar-brand" href="#">
+                        <span class="des"><img  src="logo.png" alt="GoyalShop" height="50" /><b> 𝕊𝕥𝕣𝕚𝕕𝕖 𝕟 𝕤𝕥𝕪𝕝𝕖</b></span>
+                    </a>
+              </div>
+             </div>
+        </div>
+            <div class="navbar navbar-expand-md navbar-dark  bg-dark">
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav ">
+                    <li class="nav-item"><a class="nav-link" href="Default.aspx">Home</a></li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class=" nav-link dropdown-toggle" id="navbar-Dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Manage Category
+                         <asp:Label ID="Label1" runat="server"></asp:Label></a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropDown">
+                            <li  >
+                            <a class="dropdown item" href="Category.aspx">Add Category</a>
+                            <hr class="dropdown-divider" />
+                            <a class="dropdown item"  href="Size.aspx">Add Size</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="UserDetails.aspx">User Details</a></li>
+                    <li class="nav-item"><a class="nav-link" href="AddProducts.aspx">Add Product</a></li>
+                    <li class="nav-item"><a class="nav-link" href="ProductDetails.aspx">Product Details</a></li>
+                    <li class="nav-item"><a class="nav-link" href="OrderDetails.aspx">Order Details</a></li>
+                    <li class="nav-item"><a class="nav-link" href="ProcessOrder.aspx">Orders</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Report.aspx">Report</a></li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class=" nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                         <asp:Label ID="lblUserName" runat="server" ></asp:Label></a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropDown">
+                            <li >
+                            <a class="dropdown item" href="processLogout.aspx">Log Out</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+  
+    <div class="container">
+            <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+              
+            </asp:ContentPlaceHolder>
+    </div>
+    </form>
+    <br> <br> <br> 
+    <footer>
+              <div class="main-content"> 
+                  <div class="left box">
+                      <h2>About Us</h2>
+                      <div class="content">
+                          <p></p>
+                          <div class="social">
+                              <a href="https://www.facebook.com/yogesh.goyal.33449138"><span class="fab fa-facebook-f"></span></a>
+                              <a href="https://instagram.com/yogesh.goyal.33449138?igshid=YmMyMTA2M2Y="><span class="fab fa-instagram"></span></a>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="Middle box">
+                      <h2>Contact Us</h2>
+                      <div class="content">
+                          <div class="place">
+                              <a href="https://www.google.co.in/maps/place/24,+Navi+Peth,+Solapur,+Maharashtra+413001/@17.6771108,75.9003552,18z/data=!4m13!1m7!3m6!1s0x3bc5da80756dbb51:0x3b35ad0761f6080!2s24,+Navi+Peth,+Solapur,+Maharashtra+413001!3b1!8m2!3d17.6770495!4d75.9014442!3m4!1s0x3bc5da80756dbb51:0x3b35ad0761f6080!8m2!3d17.6770495!4d75.9014442" style="text-decoration-skip:none"><span style="color:white" class="fas fa-map-marker-alt"></span></a>
+                              <span class="text">Sector 27 pradikaran ,Nigdi,Pune.</span>
+                          </div>
+                          <div class="phone">
+                              <span class="fas fa-phone-alt"></span>
+                              <span class="text">+91-8767172567</span>
+                          </div>
+                          <div class="email">
+                              <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#search/goyalyb%40gmail.com"><span style="color:white" class="fas fa-envelope"></span></a>
+                              <span class="text">stridenstyle@gmail.com</span>
+                          </div>
+                      </div>
+                      </div>
+                      <div class="right box">
+                          <h2>Features</h2>
+                          <div class="content">
+                          <ul class="list-unstyled text-small">
+                              <li><a class="text-muted" href="Home.aspx">Home</a></li>
+                              <br>
+                              <li><a class="text-muted" href="Categories.aspx">Categories</a></li>
+                          </ul>
+                         </div>
+                      </div>
+             </div>
+        </footer>
+        <!--footer content ends-->
+</body>
+</html>
